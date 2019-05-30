@@ -13,21 +13,31 @@ import InstantiateStandard
 
 final class ViewController: UIViewController {
     
-    var venue = Venue(photo: #imageLiteral(resourceName: "Kaminarimon"), name: "Kaminarimon")
-    var reviews = [
-        Review(authorImage: #imageLiteral(resourceName: "ishkawa"), authorName: "Yosuke Ishikawa", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
-        Review(authorImage: #imageLiteral(resourceName: "yamotty"), authorName: "Masatake Yamoto", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."),
-    ]
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    var relatedVenues = [
-        Venue(photo: #imageLiteral(resourceName: "Kaminarimon"), name: "Kaminarimon"),
-        Venue(photo: #imageLiteral(resourceName: "Kaminarimon"), name: "Kaminarimon"),
-        Venue(photo: #imageLiteral(resourceName: "Kaminarimon"), name: "Kaminarimon"),
-        Venue(photo: #imageLiteral(resourceName: "Kaminarimon"), name: "Kaminarimon"),
-    ]
-
+    private var state = AdvancedVenueDetailViewState()
+    
+    private let dataSource = CollectionViewDataSource<AdvancedVenueDetailViewState.CellDeclaration> {
+        CellsDeclaration in
+        
+        switch CellsDeclaration {
+        case .outline(let venue):
+            return VenueOutlineCell.makeBinder(value: venue)
+        case .sectionHeader(_):
+            return SectionHeaderCell.makeBinder(value: title)
+        case .review(_):
+            return ReviewCell.makeBinder(value: review)
+        case .relatedVenue(_):
+            return RelatedVenueCell.makeBinder(value: venue)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        collectionView.dataSource = dataSource
+        dataSource.cellDeclarations = state.cellDeclarations
     }
 }
-

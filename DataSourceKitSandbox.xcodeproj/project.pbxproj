@@ -17,6 +17,7 @@
 		820EA874229FFBA70042875F /* InstantiateStandard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820EA873229FFBA70042875F /* InstantiateStandard.framework */; };
 		820EA878229FFCFC0042875F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820EA877229FFCFC0042875F /* Review.swift */; };
 		820EA87A229FFD1B0042875F /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820EA879229FFD1B0042875F /* Venue.swift */; };
+		820EA87C22A002050042875F /* AdvancedVenueDetailViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820EA87B22A002050042875F /* AdvancedVenueDetailViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		820EA873229FFBA70042875F /* InstantiateStandard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstantiateStandard.framework; path = Carthage/Build/iOS/InstantiateStandard.framework; sourceTree = "<group>"; };
 		820EA877229FFCFC0042875F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		820EA879229FFD1B0042875F /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		820EA87B22A002050042875F /* AdvancedVenueDetailViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedVenueDetailViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				820EA863229FF9B60042875F /* Assets.xcassets */,
 				820EA865229FF9B60042875F /* LaunchScreen.storyboard */,
 				820EA868229FF9B70042875F /* Info.plist */,
+				820EA87B22A002050042875F /* AdvancedVenueDetailViewState.swift */,
 			);
 			path = DataSourceKitSandbox;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				820EA85F229FF9B40042875F /* ViewController.swift in Sources */,
 				820EA87A229FFD1B0042875F /* Venue.swift in Sources */,
+				820EA87C22A002050042875F /* AdvancedVenueDetailViewState.swift in Sources */,
 				820EA85D229FF9B40042875F /* AppDelegate.swift in Sources */,
 				820EA878229FFCFC0042875F /* Review.swift in Sources */,
 			);
