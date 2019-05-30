@@ -12,6 +12,11 @@
 		820EA862229FF9B40042875F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820EA860229FF9B40042875F /* Main.storyboard */; };
 		820EA864229FF9B60042875F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820EA863229FF9B60042875F /* Assets.xcassets */; };
 		820EA867229FF9B60042875F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820EA865229FF9B60042875F /* LaunchScreen.storyboard */; };
+		820EA870229FFB8E0042875F /* DataSourceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820EA86F229FFB8E0042875F /* DataSourceKit.framework */; };
+		820EA872229FFB9B0042875F /* Instantiate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820EA871229FFB9B0042875F /* Instantiate.framework */; };
+		820EA874229FFBA70042875F /* InstantiateStandard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 820EA873229FFBA70042875F /* InstantiateStandard.framework */; };
+		820EA878229FFCFC0042875F /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820EA877229FFCFC0042875F /* Review.swift */; };
+		820EA87A229FFD1B0042875F /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820EA879229FFD1B0042875F /* Venue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		820EA863229FF9B60042875F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820EA866229FF9B60042875F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820EA868229FF9B70042875F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		820EA86F229FFB8E0042875F /* DataSourceKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DataSourceKit.framework; path = Carthage/Build/iOS/DataSourceKit.framework; sourceTree = "<group>"; };
+		820EA871229FFB9B0042875F /* Instantiate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instantiate.framework; path = Carthage/Build/iOS/Instantiate.framework; sourceTree = "<group>"; };
+		820EA873229FFBA70042875F /* InstantiateStandard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = InstantiateStandard.framework; path = Carthage/Build/iOS/InstantiateStandard.framework; sourceTree = "<group>"; };
+		820EA877229FFCFC0042875F /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		820EA879229FFD1B0042875F /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820EA874229FFBA70042875F /* InstantiateStandard.framework in Frameworks */,
+				820EA872229FFB9B0042875F /* Instantiate.framework in Frameworks */,
+				820EA870229FFB8E0042875F /* DataSourceKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,7 @@
 			children = (
 				820EA85B229FF9B40042875F /* DataSourceKitSandbox */,
 				820EA85A229FF9B40042875F /* Products */,
+				820EA86E229FFB8D0042875F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +68,7 @@
 		820EA85B229FF9B40042875F /* DataSourceKitSandbox */ = {
 			isa = PBXGroup;
 			children = (
+				820EA876229FFCE60042875F /* View */,
 				820EA85C229FF9B40042875F /* AppDelegate.swift */,
 				820EA85E229FF9B40042875F /* ViewController.swift */,
 				820EA860229FF9B40042875F /* Main.storyboard */,
@@ -62,6 +77,25 @@
 				820EA868229FF9B70042875F /* Info.plist */,
 			);
 			path = DataSourceKitSandbox;
+			sourceTree = "<group>";
+		};
+		820EA86E229FFB8D0042875F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				820EA873229FFBA70042875F /* InstantiateStandard.framework */,
+				820EA871229FFB9B0042875F /* Instantiate.framework */,
+				820EA86F229FFB8E0042875F /* DataSourceKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		820EA876229FFCE60042875F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				820EA877229FFCFC0042875F /* Review.swift */,
+				820EA879229FFD1B0042875F /* Venue.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +108,7 @@
 				820EA855229FF9B40042875F /* Sources */,
 				820EA856229FF9B40042875F /* Frameworks */,
 				820EA857229FF9B40042875F /* Resources */,
+				820EA875229FFBB80042875F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,13 +165,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		820EA875229FFBB80042875F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/DataSourceKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Instantiate.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/InstantiateStandard.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		820EA855229FF9B40042875F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				820EA85F229FF9B40042875F /* ViewController.swift in Sources */,
+				820EA87A229FFD1B0042875F /* Venue.swift in Sources */,
 				820EA85D229FF9B40042875F /* AppDelegate.swift in Sources */,
+				820EA878229FFCFC0042875F /* Review.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +344,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P46632C32H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataSourceKitSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +366,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P46632C32H;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = DataSourceKitSandbox/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

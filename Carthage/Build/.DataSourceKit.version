@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.2.0",
+  "iOS" : [
+    {
+      "name" : "DataSourceKit",
+      "hash" : "43b1c8b0b92e501eaa90e795eda5f32ab39d4a9687e4f870bfb79f3736dddc30"
+    }
+  ]
+}

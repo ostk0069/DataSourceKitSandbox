@@ -1,0 +1,11 @@
+framework module DataSourceKit {
+  umbrella header "DataSourceKit.h"
+
+  export *
+  module * { export * }
+}
+
+module DataSourceKit.Swift {
+    header "DataSourceKit-Swift.h"
+    requires objc
+}

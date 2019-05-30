@@ -1,0 +1,17 @@
+{
+  "commitish" : "4.0.0",
+  "iOS" : [
+    {
+      "name" : "InstantiateStandard",
+      "hash" : "b9bdcede9eae06fcfbbeb5f998352af898d4016696fce199f186efbd3a7810f2"
+    },
+    {
+      "name" : "Instantiate",
+      "hash" : "3035fb84ef263670a6133b5461ce2ae565c7add1b61a256a8e07734ae7e0a038"
+    },
+    {
+      "name" : "InstantiateStandard",
+      "hash" : "b9bdcede9eae06fcfbbeb5f998352af898d4016696fce199f186efbd3a7810f2"
+    }
+  ]
+}
